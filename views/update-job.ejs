@@ -1,0 +1,255 @@
+<div class="modern-form-wrapper">
+  <div class="form-glass-card">
+    <h2 class="form-title">Update Job</h2>
+    <form action="/job/update/<%=job.id%>" method="post">
+      <!-- Job Category -->
+      <div class="input-group">
+        <label for="job_category" class="input-label">Job Category</label>
+        <select id="job_category" required name="job_category" class="input-select">
+          <option selected disabled>Select job category</option>
+          <option value="Tech" <%=job.job_category.includes('Tech') ? 'selected' : '' %>>Tech</option>
+          <option value="Non-Tech" <%=job.job_category.includes('Non Tech') ? 'selected' : '' %>>Non Tech</option>
+        </select>
+      </div>
+
+      <!-- Job designation -->
+      <div class="input-group">
+        <label for="job_designation" class="input-label">Job designation</label>
+        <input id="job_designation" value="<%=job.job_designation%>" required name="job_designation" type="text"
+          class="input-field" placeholder="Enter Job designation" />
+      </div>
+
+      <!-- Job Location -->
+      <div class="input-group">
+        <label for="job_location" class="input-label">Job Location</label>
+        <input id="job_location" value="<%=job.job_location%>" required name="job_location" type="text"
+          class="input-field" placeholder="Enter job location" />
+      </div>
+
+      <!-- Company Name -->
+      <div class="input-group">
+        <label for="company_name" class="input-label">Company Name</label>
+        <input id="company_name" value="<%=job.company_name%>" required name="company_name" type="text"
+          class="input-field" placeholder="Enter company name" />
+      </div>
+
+      <!-- Company Founded -->
+      <div class="input-group">
+        <label for="company_founded" class="input-label">Year Founded</label>
+        <input id="company_founded" value="<%=job.company_founded%>" required name="company_founded" type="number"
+          class="input-field" placeholder="Year Founded" />
+      </div>
+
+      <!-- Company Employees -->
+      <div class="input-group">
+        <label for="employees" class="input-label">Number of Employees</label>
+        <input id="employees" name="employees" value="<%=job.employees%>" required type="text" class="input-field"
+          placeholder="Number of Employees" />
+      </div>
+
+      <!-- Salary and Total Positions -->
+      <div class="input-row">
+        <div class="input-group">
+          <label for="salary" class="input-label">Salary</label>
+          <input id="salary" value="<%=job.salary%>" required name="salary" type="text" class="input-field"
+            placeholder="Enter salary" />
+        </div>
+        <div class="input-group">
+          <label for="number_of_openings" class="input-label">Total Positions</label>
+          <input id="number_of_openings" value="<%=job.number_of_openings%>" required name="number_of_openings"
+            type="number" class="input-field" placeholder="Total no of openings" />
+        </div>
+        <div class="input-group">
+          <label for="experience" class="input-label">Experience</label>
+          <input id="experience" value="<%=job.experience%>" required name="experience" type="text" class="input-field"
+            placeholder="Experience Required (e.g., 3-5 years)" />
+        </div>
+      </div>
+
+      <!-- Skills Required -->
+      <div class="input-group">
+        <label for="skills_required" class="input-label">Skills Required</label>
+        <select multiple size="5" id="skills_required" name="skills_required" class="input-select multi-select">
+          <option disabled>select skills required for this job</option>
+          <option value="React" <%=job.skills_required.includes('React') ? 'selected' : '' %>>React</option>
+          <option value="NodeJs" <%=job.skills_required.includes('NodeJs') ? 'selected' : '' %>>NodeJs</option>
+          <option value="Angular" <%=job.skills_required.includes('Angular') ? 'selected' : '' %>>Angular</option>
+          <option value="MongoDB" <%=job.skills_required.includes('MongoDB') ? 'selected' : '' %>>MongoDB</option>
+          <option value="SQL" <%=job.skills_required.includes('SQL') ? 'selected' : '' %>>SQL</option>
+          <option value="Express" <%=job.skills_required.includes('Express') ? 'selected' : '' %>>Express</option>
+          <option value="Java" <%=job.skills_required.includes('Java') ? 'selected' : '' %>>Java</option>
+          <option value="SpringBoot" <%=job.skills_required.includes('SpringBoot') ? 'selected' : '' %>>SpringBoot
+          </option>
+          <option value="C++" <%=job.skills_required.includes('C++') ? 'selected' : '' %>>C++</option>
+          <option value="Data Structures & Algo" <%=job.skills_required.includes('Data Structures & Algo') ? 'selected'
+            : '' %>>Data Structures & Algo</option>
+          <option value="Figma" <%=job.skills_required.includes('Figma') ? 'selected' : '' %>>Figma</option>
+          <option value="Adobe XD" <%=job.skills_required.includes('Adobe XD') ? 'selected' : '' %>>Adobe XD</option>
+          <option value="Sketch" <%=job.skills_required.includes('Sketch') ? 'selected' : '' %>>Sketch</option>
+          <option value="User Research" <%=job.skills_required.includes('User Research') ? 'selected' : '' %>>User
+            Research</option>
+          <option value="Prototyping" <%=job.skills_required.includes('Prototyping') ? 'selected' : '' %>>Prototyping
+          </option>
+          <option value="Product Management" <%=job.skills_required.includes('Product Management') ? 'selected' : '' %>
+            >Product Management</option>
+          <option value="Agile" <%=job.skills_required.includes('Agile') ? 'selected' : '' %>>Agile</option>
+          <option value="Data Analysis" <%=job.skills_required.includes('Data Analysis') ? 'selected' : '' %>>Data
+            Analysis</option>
+          <option value="Python" <%=job.skills_required.includes('Python') ? 'selected' : '' %>>Python</option>
+          <option value="Machine Learning" <%=job.skills_required.includes('Machine Learning') ? 'selected' : '' %>
+            >Machine Learning</option>
+          <option value="Data Visualization" <%=job.skills_required.includes('Data Visualization') ? 'selected' : '' %>
+            >Data Visualization</option>
+          <option value="Microservices" <%=job.skills_required.includes('Microservices') ? 'selected' : '' %>
+            >Microservices</option>
+          <option value="AWS" <%=job.skills_required.includes('AWS') ? 'selected' : '' %>>AWS</option>
+          <option value="Python" <%=job.skills_required.includes('Python') ? 'selected' : '' %>>Python</option>
+
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="logo" class="input-label">Company Logo (PNG, JPG, JPEG, GIF):</label>
+        <input type="file" value="<%=job.logo%>" name="logo" class="input-field" accept=".png, .jpg, .jpeg, .gif">
+      </div>
+
+      <!-- Apply By -->
+      <div class="input-group">
+        <label for="apply_by" class="input-label">Apply By</label>
+        <input id="apply_by" value="<%=job.apply_by%>" name="apply_by" type="date" class="input-field" />
+      </div>
+
+      <!-- Submit Button -->
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<style>
+  .modern-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .form-glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .input-group {
+    margin-bottom: 1.75rem;
+  }
+
+  option {
+    padding: 10px;
+    /* Adds space inside each option */
+  }
+
+  .input-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #8d8282;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .input-field,
+  .input-select {
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0.8rem;
+    /* background: transparent; */
+    border: 1px solid #f4f4f4;
+    color: #c4c4c4;
+    font-size: 1rem;
+  }
+
+  .input-field:focus,
+  .input-select:focus {
+    outline: none;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .input-field::placeholder {
+    color: #c4c4c4;
+  }
+
+  .input-select[multiple] {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    height: 180px;
+  }
+
+  .input-select option {
+    color: #333;
+    cursor: pointer;
+    padding: 12px;
+    /* Increased padding inside options */
+    margin: 5px 0;
+    /* Adds spacing between options */
+    font-size: 1rem;
+    /* Adjusts the font size */
+  }
+
+
+  .input-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .input-row .input-group {
+    flex: 1;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 0.75rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.5);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .form-glass-card {
+      padding: 1.5rem;
+    }
+
+    .input-row {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

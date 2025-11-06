@@ -1,0 +1,24 @@
+#error-page{
+  text-align: center;
+}
+
+.content .main-heading {
+  margin-top: 12px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  padding: 0.7rem 0;
+}
+
+#error-button {
+  padding: 0.6rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: #0046d4;
+  color: #fff;
+  cursor: pointer;
+}

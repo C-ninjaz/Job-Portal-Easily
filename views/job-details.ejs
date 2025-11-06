@@ -1,0 +1,1235 @@
+<!-- Main Job Listing Page Layout -->
+<div class="job-page jd-container">
+  <div class="page-header">
+    <div class="jd-container-sm">
+      <div class="breadcrumb">
+        <a href="/">Home</a> / <a href="/jobs">Jobs</a> / <span>
+          <%= data.job_designation %>
+        </span>
+      </div>
+      <h1 class="job-title">
+        <%= data.job_designation %>
+      </h1>
+      <div class="company-info">
+        <img src="/<%= data.logo%>" alt="<%= data.company_name %>" class="company-logo">
+        <div>
+          <h2 class="company-name">
+            <%= data.company_name %>
+          </h2>
+          <div class="job-meta">
+            <span class="job-location">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 21C16 17 20 13.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 13.4183 8 17 12 21Z" />
+              </svg>
+              <%= data.job_location %>
+            </span>
+            <span class="job-type">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <%= data.job_category %>
+            </span>
+            <span class="job-salary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+              <%= data.salary %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jd-container">
+    <div class="content-wrapper">
+      <!-- Main Content Column -->
+      <div class="main-content">
+        <!-- Action buttons -->
+        <div class="action-buttons">
+          <button class="action-btn bookmark-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" />
+            </svg>
+            Bookmark
+          </button>
+          <button class="action-btn share-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" />
+            </svg>
+            Share
+          </button>
+          <%if(user){%>
+            <a class="action-btn bookmark-btn" href="/job/update/<%=data.id%>">
+              <svg class="feather feather-edit" fill="none" width="18" height="18" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+              </svg>
+              Edit
+            </a>
+            <a class="action-btn bookmark-btn" href="/job/delete/<%=data.id%>">
+              <i class="fa-regular fa-trash-can fa-lg" style="color: #6b7280;"></i>
+              Delete
+            </a>
+            <%}%>
+        </div>
+
+        <!-- Job Description Section -->
+        <div class="content-section">
+          <h3 class="section-heading">Job Description</h3>
+          <div class="section-content job-description">
+            We are seeking a Senior Frontend Developer with expertise in React.js, TypeScript, and modern frontend
+            architectures to drive best practices, optimize performance, and ensure a scalable, reusable component-based
+            system. While the primary focus is frontend development, the role also requires strong proficiency in
+            Node.js, as it is essential for builds, development, and tooling. A strong understanding of the entire
+            Software Development Lifecycle (SDLC) is critical to ensure high-quality, maintainable code and smooth
+            delivery processes.
+          </div>
+        </div>
+
+        <!-- Responsibilities Section -->
+        <div class="content-section">
+          <h3 class="section-heading">Responsibilities</h3>
+          <div class="section-content">
+            <ul class="modern-list">
+
+              <li>Develop and maintain robust web applications using modern technologies.</li>
+              <li>Collaborate with cross-functional teams including designers, product managers, and other developers
+                to define, design, and ship new features.</li>
+              <li>Optimize application for maximum speed and scalability, ensuring technical feasibility of UI/UX
+                designs.</li>
+              <li>Lead frontend architecture, ensuring scalability, maintainability, and best practices.</li>
+              <li>Ensure efficient collaboration with the design team, ensuring Figma designs align with frontend best
+                practices:</li>
+              <li>Optimize performance with lazy loading, code splitting, and minimizing re-renders.</li>
+              <li>Advocate for consistent design tokens, spacing, and UI patterns to maximize reusability.</li>
+              <li>Ensure high-quality development by following SDLC best practices, from planning to deployment and
+                maintenance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Requirements Section -->
+        <div class="content-section">
+          <h3 class="section-heading">Requirements</h3>
+          <div class="section-content">
+            <ul class="modern-list">
+              <li>
+                <%= data.experience%> of frontend development experience with strong expertise in React.js & TypeScript
+              </li>
+              <li> Deep knowledge of component-based architecture, hooks, and state management best practices</li>
+              <li> Strong skills in HTML5, CSS3, and styling with Material UI (Mui) and JSS</li>
+              <li> Experience with frontend performance optimization and best practices</li>
+              <li> Familiarity with RESTful APIs and serverless APIs for backend integration</li>
+              <li> Experience with Git, Webpack, Babel, and CI/CD pipelines</li>
+              <li> Exposure to Leaflet.js or GIS technologies is a plus but not mandatory</li>
+              <li> Strong understanding of the Software Development Lifecycle (SDLC) and best practices</li>
+              <li> Strong communication and collaboration skills</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="content-section">
+          <h3 class="section-heading">Benefits</h3>
+          <div class="section-content benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Health insurance</div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Emergency Loans</div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Workations</div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Open Door Policy</div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Learning and Development</div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <div class="benefit-text">Work from Anywhere</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Column -->
+      <div class="sidebar-column">
+        <!-- Job Sidebar (Using our modern design) -->
+        <div class="job-sidebar">
+          <!-- Header with visual indicator -->
+          <div class="sidebar-header">
+            <div class="pulse-indicator"></div>
+            <h3>Job Overview</h3>
+          </div>
+
+          <!-- Quick Facts Section -->
+          <div class="info-section">
+            <div class="section-title">Quick Facts</div>
+
+            <!-- Application Deadline -->
+            <div class="info-card">
+              <div class="info-icon deadline-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <div class="info-label">Application Deadline</div>
+                <div class="deadline-value">
+                  <%= data.apply_by %>
+                </div>
+              </div>
+            </div>
+
+            <!-- Open Positions -->
+            <div class="info-card">
+              <div class="info-icon positions-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m5 0h1M9 11h1m5 0h1M9 15h1m5 0h1" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <div class="info-label">Open Positions</div>
+                <div class="positions-value">
+                  <%= data.number_of_openings %>
+                </div>
+              </div>
+            </div>
+
+            <!-- Applicants -->
+            <a href="/job/applicants/<%= data.id %>" class="applicants-link">
+              <div class="info-icon applicants-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <div class="applicants-count">
+                  <%= data.applicants.length %> Applicants
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Required Skills Section -->
+          <div class="info-section">
+            <div class="section-title">Required Skills</div>
+            <div class="skills-container">
+              <% data.skills_required.forEach((skill)=> { %>
+                <div class="skill-badge">
+                  <%= skill %>
+                </div>
+                <% }) %>
+            </div>
+          </div>
+
+          <!-- Apply Button -->
+          <button data-bs-toggle="modal" data-bs-target="#step1" class="apply-button">
+            <span class="button-text">Apply Now</span>
+            <span class="button-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <!-- Company Info Card -->
+        <div class="company-card">
+          <div class="company-card-header">
+            <h3>About the Company</h3>
+          </div>
+          <div class="company-card-content">
+            <img src="/<%= data.logo%>" alt="<%= data.company_name %>" class="company-detail-logo">
+            <h4>
+              <%= data.company_name %>
+            </h4>
+            <div class="company-info-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0m9-4.5v4.5l3 3" />
+              </svg>
+              <span>Founded: <%= data.company_founded %></span>
+            </div>
+            <div class="company-info-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm15 7v-2a4 4 0 0 0-3-3.87m-4-12a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>
+                <%= data.employees %>
+              </span>
+            </div>
+            <div class="company-info-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 21C16 17 20 13.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 13.4183 8 17 12 21Z" />
+              </svg>
+              <span>
+                <%= data.job_location %>
+              </span>
+            </div>
+            <p class="company-description">
+              <%= data.company_description %>
+            </p>
+            <a href="www.<%= data.company_name%>.com" target="_blank" class="company-website-link">
+              Visit Website
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="vector-design">
+          <img
+            src="https://img.freepik.com/free-vector/recruitment-concept-illustration_23-2148621466.jpg?t=st=1742469094~exp=1742472694~hmac=e42aeda76f54de5aedf82633e8c60528f3aaa36b532c3c5c7c3daa9c448b7111&w=900"
+            alt="" width="400px" height="400px" style="border-radius: 300px;">
+          <div class="benefit-item" style="margin-top: 24px;">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div class="benefit-text">With Premium Get Noticed by Recruiter upto 20x more</div>
+          </div>
+          <div class="benefit-item" style="margin-top: 24px;">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div class="benefit-text">Premium subscribers get 11x more profile views on average.</div>
+          </div>
+          <div class="benefit-item" style="margin-top: 24px;">
+            <div class="benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div class="benefit-text">Get personalized resume suggestions from our Premium writing assistant</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Step 1: Name & Email -->
+<form id="multiStepForm" action="/apply/<%=data.id%>" method="post" enctype="multipart/form-data">
+  <div class="modal fade" id="step1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header">
+          <div>
+
+            <h5 class="modal-title"><i class="fa-solid fa-id-card"></i> Personal Info</h5>
+          </div>
+          <div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <label class="form-label small">Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+              <input type="email" class="form-control" name="email" id="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#step2" data-bs-toggle="modal">Next <i
+              class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Contact -->
+  <div class="modal fade" id="step2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header step-header">
+          <h5 class="modal-title"><i class="bi bi-telephone-fill"></i> Step 2: Contact Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <label class="form-label small">Contact</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+              <input type="tel" class="form-control" name="contact" id="contact" placeholder="+91 ____ __ ____"
+                required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-target="#step1" data-bs-toggle="modal"><i
+              class="bi bi-arrow-left"></i> Previous</button>
+          <button class="btn btn-primary" data-bs-target="#step3" data-bs-toggle="modal">Next <i
+              class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Resume Upload -->
+  <div class="modal fade" id="step3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header step-header">
+          <h5 class="modal-title"><i class="bi bi-file-earmark-arrow-up"></i> Step 3: Upload Resume</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="mb-3">
+            <label class="form-label small">Resume</label>
+            <input type="file" class="form-control" name="resume" id="resume" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-target="#step2" data-bs-toggle="modal"><i
+              class="bi bi-arrow-left"></i> Previous</button>
+          <button type="submit" class="btn btn-success" onclick="submitForm()">Submit <i
+              class="bi bi-check-circle"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  function submitForm() {
+    document.getElementById('multiStepForm').submit();
+  }
+</script>
+
+
+
+
+<style>
+  /* Modern Page Styles */
+  :root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-tertiary: #9ca3af;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .jd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    border-radius: 20px;
+  }
+
+  .jd-container-sm {
+    max-width: 1105px;
+    padding: 0 24px;
+    margin-left: 24px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 20px;
+  }
+
+
+  /* Page Header */
+  .page-header {
+    background-color: var(--bg-white);
+    margin-bottom: 32px;
+    border-radius: 20px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin-bottom: 10px;
+    margin-left: 35px;
+  }
+
+  .breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .job-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 20px 30px;
+  }
+
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-left: 20px;
+  }
+
+  .company-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-light);
+    padding: 8px;
+  }
+
+  .company-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  .job-meta {
+    display: flex;
+    gap: 16px;
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+
+  .job-location,
+  .job-type,
+  .job-salary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 10px 0;
+    color: var(--text-light);
+  }
+
+  /* Content Layout */
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 32px;
+  }
+
+  @media (max-width: 991px) {
+    .content-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Main Content */
+  .main-content {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  }
+
+  .action-btn {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .action-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .content-section {
+    padding: 32px 24px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .content-section:last-child {
+    border-bottom: none;
+  }
+
+  .section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+  }
+
+  .section-content {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .job-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .job-description p {
+    margin-bottom: 16px;
+  }
+
+  .modern-list {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .modern-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 8px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--bg-light);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    transition: transform 0.2s ease;
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .benefit-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+  }
+
+  .benefit-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  /* Job Sidebar Styles (Copy from previous code) */
+  .job-sidebar {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease;
+  }
+
+  .job-sidebar:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Header */
+  .sidebar-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: white;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sidebar-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .pulse-indicator {
+    width: 12px;
+    height: 12px;
+    background: #4ade80;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .pulse-indicator::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 222, 128, 0.4);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    top: 0;
+    left: 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+
+    70% {
+      transform: scale(2);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  /* Info Sections */
+  .info-section {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Info Cards */
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .deadline-icon {
+    background: rgba(244, 63, 94, 0.1);
+    color: #f43f5e;
+  }
+
+  .positions-icon {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+  }
+
+  .applicants-icon {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+  }
+
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .deadline-value,
+  .positions-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* Applicants Link */
+  .applicants-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+  }
+
+  .applicants-link:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+  }
+
+  .applicants-count {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3b82f6;
+  }
+
+  /* Skills */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+
+  .skill-badge {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+  }
+
+  .skill-badge:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Apply Button */
+  .apply-button {
+    margin: 0 24px 24px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+  }
+
+  .apply-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.3);
+  }
+
+  .button-icon {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .apply-button:hover .button-icon {
+    transform: translateX(4px);
+  }
+
+  /* Company Card */
+  .company-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .company-card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  }
+
+  .company-card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .company-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .company-detail-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-light);
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  .vector-design {
+    width: 450px;
+    margin-top: 50px;
+    object-fit: contain;
+  }
+
+  .company-card-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .company-info-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .company-description {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+
+  .company-website-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .company-website-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+  }
+
+  /* Modal styles */
+
+  .modal-header {
+    color: white;
+  }
+
+  .btn-close {
+    background-color: white;
+  }
+
+  /* Step Indicator */
+  .step-indicator {
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    margin-left: 20px;
+    border-radius: 12px;
+  }
+
+  /* Buttons */
+  .modal-footer .btn {
+    font-weight: 600;
+    align-items: center;
+  }
+
+  .modal-footer .btn i {
+    margin-left: 6px;
+  }
+
+  .modal-footer i {
+    transition: color 0.3s ease;
+  }
+
+  .modal-footer i:hover {
+    color: var(--primary-color);
+  }
+
+
+  .modal-content {
+    border-radius: var(--radius-md);
+    border: none;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  }
+
+  .modal-title {
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 24px;
+  }
+
+  .form-label {
+    font-weight: 500;
+    color: #3b82f6;
+    margin-bottom: 6px;
+  }
+
+  .form-control {
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+  }
+
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  }
+
+  #submitb {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+
+  #submitb:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .job-title {
+      font-size: 24px;
+    }
+
+    .company-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .job-meta {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .action-btn {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .content-section {
+      padding: 24px 16px;
+    }
+
+    .sidebar-header {
+      padding: 16px;
+    }
+
+    .info-section,
+    .apply-button {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .company-card-content {
+      padding: 16px;
+    }
+  }
+
+  /* Additional Animation Effects */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .content-section {
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  .content-section:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .content-section:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .content-section:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  /* Print Styles */
+  @media print {
+
+    .action-buttons,
+    .job-sidebar,
+    .company-card {
+      display: none;
+    }
+
+    .content-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .page-header,
+    .main-content {
+      box-shadow: none;
+      border: none;
+    }
+
+    body {
+      background-color: white;
+    }
+  }
+
+  /* Accessibility Improvements */
+  .apply-button:focus,
+  .action-btn:focus,
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.4);
+  }
+
+  .skill-badge,
+  .benefit-item {
+    cursor: pointer;
+  }
+</style>

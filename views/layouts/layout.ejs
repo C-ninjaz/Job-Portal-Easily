@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= locals.title ? locals.title : 'Easily - Find Your Dream Job' %>
+  </title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/404.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/satoshi');
+
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --text-dark: #1f2937;
+      --bg-light: #f3f4f6;
+      --primary-color: #5c4de1;
+      --primary-dark: #3f32a5;
+      --secondary-color: #18d5a5;
+      --secondary-hover: #15c195;
+      --text-dark: #2c3345;
+      --text-light: #6c757d;
+      --bg-light: #f9fafb;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.09);
+      --shadow-hover: 0 10px 30px rgba(92, 77, 225, 0.15);
+      --border-radius-sm: 8px;
+      --border-radius-md: 12px;
+      --border-radius-lg: 20px;
+    }
+
+    body {
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    #mynav {
+      background-color: white !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 0.8rem 0;
+      height: 70px;
+      position: sticky;
+      top: 0.1px;
+      z-index: 100;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      transition: color 0.3s;
+      position: relative;
+      text-decoration: none !important;
+    }
+
+    .nav-item:hover {
+      cursor: pointer;
+      color: black;
+    }
+
+    .nav-item:focus {
+      color: black;
+    }
+
+    /* Update the underline effect */
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2.8px;
+      background-color: #F05537;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-item:hover::after,
+    .nav-item:focus::after {
+      border-radius: 80px;
+      transform: scaleX(0.8);
+    }
+
+
+    .nav-item.dropdown::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2.8px;
+      background-color: #F05537;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-item.dropdown:hover::after,
+    .nav-item.dropdown:focus::after {
+      border-radius: 80px;
+      transform: scaleX(0.7);
+    }
+
+    .nav-item.dropdown
+
+    /* Keep dropdown arrow separate */
+    .dropdown-toggle::after {
+      display: none;
+      /* Remove default arrow */
+    }
+
+    .dropdown-toggle:before {
+      font-family: "Font Awesome 6 Free";
+      content: "\f107";
+      font-weight: 900;
+      margin-left: -10px;
+      vertical-align: middle;
+    }
+
+    .dropdown-toggle::after {
+      border: none;
+      margin-left: 0.5em;
+      font-family: "Font Awesome 6 Free";
+      content: "\f107";
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+    }
+
+    .dropdown-item {
+      color: #474D6A;
+      padding: 0.7rem 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .dropdown-item:hover {
+      background-color: var(--bg-light);
+      color: var(--primary-color);
+    }
+
+    .form-control-sm {
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #f0eaea;
+      transition: all 0.3s;
+    }
+
+    .form-control-sm:focus {
+      outline: none;
+      border: 1px solid #dad5d5;
+    }
+
+    .btn-outline-success:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .user-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--bg-light);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    /* Footer Enhancement */
+    .footer {
+      background-color: white;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+
+    .footer-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .footer-link {
+      color: var(--text-light);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--primary-color);
+      transform: translateX(4px);
+    }
+
+    .social-icons a {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Newsletter Form */
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-btn {
+      background-color: #F05537;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0px 15px 0px 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-input {
+        max-width: 100%;
+      }
+
+      .footer-title {
+        text-align: center;
+      }
+    }
+
+    .nI-gNb-footer__separator {
+      background: #e7e7f1;
+      background: var(--N400, #e7e7f1);
+      height: 1px;
+      margin: 40px auto;
+      opacity: .8;
+      width: 1120px;
+    }
+
+    #search-btn {
+      font-weight: 800;
+      padding: 0.6rem 1.2rem;
+      color: whitesmoke;
+      transition: all 0.3s;
+    }
+
+    #search-btn:hover {
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="mynav" class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <i class="fas fa-briefcase me-2"></i>easily
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jobs">
+              Jobs
+            </a>
+          </li>
+          <% if (locals.user) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/seeker/applications">
+                My Applications
+              </a>
+            </li>
+            <% } %>
+              <li class="nav-item dropdown">
+                <a class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdowns">
+                  <% if (locals.user) { %>
+                    <div class="d-flex">
+                      <div style="margin-right: 10px;">
+                        <%= user.name %>
+                      </div>
+                      <i class="fa fa-chevron-down fa-2xs" style="margin-top: 10px;font-size: 14px;"></i>
+                    </div>
+
+                    <% } else { %>
+                      <div class="d-flex">
+                        <div style="margin-right: 10px;">Account</div>
+                        <i class="fa fa-chevron-down fa-2xs" style="margin-top: 10px;font-size: 14px;"></i>
+                      </div>
+                      <% } %>
+                </a>
+                <ul class="dropdown-menu">
+                  <% if (locals.user) { %>
+                    <li>
+                      <a class="dropdown-item" href="/seeker/applications" style="font-size: 14px;">
+                        <i class="fas fa-clipboard-list me-2" style="font-size: 12px;"></i>My Applications
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/logout" style="font-size: 14px;">
+                        <i class="fas fa-sign-out-alt me-2" style="font-size: 12px;"></i>Logout
+                      </a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/postjob" style="font-size: 14px;">
+                        <i class="fas fa-plus-circle me-2" style="font-size: 12px;"></i>Post New Job
+                      </a>
+                    </li>
+                    <% } else { %>
+                      <li>
+                        <h6 class="dropdown-header">Recruiter</h6>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/login" style="font-size: 14px;">
+                          <i class="fas fa-sign-in-alt me-2" style="font-size: 12px;"></i>Login
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/signup" style="font-size: 14px;">
+                          <i class="fas fa-user-plus me-2" style="font-size: 12px;"></i>Sign Up
+                        </a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <h6 class="dropdown-header">Jobseeker</h6>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/seeker/login" style="font-size: 14px;">
+                          <i class="fas fa-user me-2" style="font-size: 12px;"></i>Login
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/seeker/signup" style="font-size: 14px;">
+                          <i class="fas fa-user-plus me-2" style="font-size: 12px;"></i>Sign Up
+                        </a>
+                      </li>
+                      <% } %>
+                </ul>
+              </li>
+
+        </ul>
+        <form class="d-flex" role="search" action="/jobs" method="get">
+          <input class="form-control-sm me-2" type="search" name="q" value="<%= typeof q !== 'undefined' ? q : '' %>"
+            placeholder="Search jobs..." aria-label="Search" />
+          <button class="btn btn-primary btn-sm" type="submit" id="search-btn">
+            <i class="fas fa-search me-1"></i>Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="qsb-header-container"></div>
+  <div class="container-fluid">
+    <% if (locals.lastVisit) { %>
+      <div class="alert alert-light border d-flex align-items-center mt-3" role="alert">
+        <i class="fa-regular fa-clock me-2"></i>
+        <div class="small">Last visit: <strong>
+            <%= lastVisit %>
+          </strong></div>
+      </div>
+      <% } %>
+        <%- body %>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">About Easily</h5>
+          <p class="text-muted mb-4">Your go-to platform for finding dream jobs. We connect talented professionals with
+            top companies worldwide.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <a href="/jobs" class="footer-link">Find Jobs</a>
+          <a href="/postjob" class="footer-link">Post a Job</a>
+          <a href="/about" class="footer-link">About Us</a>
+          <a href="/contact" class="footer-link">Contact Us</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact</h5>
+          <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Job Street, Job City</p>
+          <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(123) 456-7890</p>
+          <p class="text-muted mb-2"><i class="fas fa-envelope me-2"></i>info@easily.com</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Newsletter</h5>
+          <p class="text-muted mb-4">Get the latest job updates and career tips.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email">
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="text-center">
+        <p class="text-muted">&copy; <%= new Date().getFullYear() %> Easily. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script>
+    // simple confirm for delete links
+    document.addEventListener('click', function (e) {
+      const el = e.target.closest('a[href^="/job/delete/"]');
+      if (el) {
+        if (!confirm('Are you sure you want to delete this job?')) {
+          e.preventDefault();
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

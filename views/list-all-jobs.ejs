@@ -1,0 +1,240 @@
+<form id="jobsFilterForm" action="/jobs" method="get">
+  <div class="main-container">
+    <div class="filters">
+      <div class="filter-section">
+        <div class="filter-heading">
+          <span>Job filters</span>
+          <a href="/jobs" class="filter-edit">Clear all</a>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-heading">Date posted</div>
+        <div class="filter-option">
+          <input type="radio" id="past24" name="date" value="24h" <%=filters && filters.date==='24h' ? 'checked' : '' %>
+          >
+          <label for="past24">Past 24 hours</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="past3days" name="date" value="3d" <%=filters && filters.date==='3d' ? 'checked' : ''
+            %> >
+          <label for="past3days">Past 3 days</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="pastWeek" name="date" value="week" <%=filters && filters.date==='week' ? 'checked'
+            : '' %> >
+          <label for="pastWeek">Past week</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="pastMonth" name="date" value="month" <%=filters && filters.date==='month' ? 'checked'
+            : '' %> >
+          <label for="pastMonth">Past month</label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-heading">Experience level</div>
+        <div class="filter-option">
+          <input type="checkbox" id="internship" name="levels" value="Internship" <%=filters &&
+            Array.isArray(filters.levels) && filters.levels.includes('Internship') ? 'checked' : '' %> >
+          <label for="internship">Internship</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="entry" name="levels" value="Entry level" <%=filters &&
+            Array.isArray(filters.levels) && filters.levels.includes('Entry level') ? 'checked' : '' %> >
+          <label for="entry">Entry level</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="associate" name="levels" value="Associate" <%=filters &&
+            Array.isArray(filters.levels) && filters.levels.includes('Associate') ? 'checked' : '' %> >
+          <label for="associate">Associate</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="mid-senior" name="levels" value="Mid-Senior" <%=filters &&
+            Array.isArray(filters.levels) && filters.levels.includes('Mid-Senior') ? 'checked' : '' %> >
+          <label for="mid-senior">Mid-Senior level</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="director" name="levels" value="Director" <%=filters &&
+            Array.isArray(filters.levels) && filters.levels.includes('Director') ? 'checked' : '' %> >
+          <label for="director">Director</label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-heading">Job type</div>
+        <div class="filter-option">
+          <input type="checkbox" id="fulltime" name="types" value="Full-time" <%=filters && Array.isArray(filters.types)
+            && filters.types.includes('Full-time') ? 'checked' : '' %> >
+          <label for="fulltime">Full-time</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="parttime" name="types" value="Part-time" <%=filters && Array.isArray(filters.types)
+            && filters.types.includes('Part-time') ? 'checked' : '' %> >
+          <label for="parttime">Part-time</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="contract" name="types" value="Contract" <%=filters && Array.isArray(filters.types)
+            && filters.types.includes('Contract') ? 'checked' : '' %> >
+          <label for="contract">Contract</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="remote" name="types" value="Remote" <%=filters && Array.isArray(filters.types) &&
+            filters.types.includes('Remote') ? 'checked' : '' %> >
+          <label for="remote">Remote</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="jobs-content">
+      <div class="search-container">
+        <div class="search-input">
+          <i class="bi bi-search"></i>
+          <input type="text" name="q" value="<%= typeof q !== 'undefined' ? q : '' %>"
+            placeholder="Search job titles or keywords">
+        </div>
+        <div class="location-input">
+          <i class="bi bi-geo-alt"></i>
+          <input type="text" name="loc" value="<%= filters && filters.loc ? filters.loc : '' %>" placeholder="Location">
+        </div>
+        <button class="search-btn" type="submit">Search</button>
+      </div>
+
+      <div class="jobs-section-header">
+        <div class="jobs-found">
+          <%= pagination && pagination.total !==undefined ? pagination.total : jobs.length %> jobs found
+        </div>
+        <div class="sort-options">
+          <span class="sort-by">Sort by:</span>
+          <select class="sort-select" name="sort">
+            <option value="recent" <%=filters && filters.sort==='recent' ? 'selected' : '' %>>Recent</option>
+            <option value="relevant" <%=filters && filters.sort==='relevant' ? 'selected' : '' %>>Most relevant</option>
+            <option value="salary-high" <%=filters && filters.sort==='salary-high' ? 'selected' : '' %>>Salary (high to
+              low)</option>
+            <option value="salary-low" <%=filters && filters.sort==='salary-low' ? 'selected' : '' %>>Salary (low to
+              high)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="job-list">
+        <% if(jobs.length===0){ %>
+          <h1 class="text-danger text-center">No jobs found</h1>
+          <% } %>
+
+            <% jobs.forEach(function(job){ %>
+              <div class="job-card">
+                <% if(job.featured){ %>
+                  <div class="featured-badge">
+                    <i class="bi bi-star-fill"></i> Featured
+                  </div>
+                  <% } %>
+                    <div class="job-logo">
+                      <img src="<%= job.logo %>" alt="Google">
+                    </div>
+                    <div class="job-content">
+                      <h3 class="job-title-all">
+                        <%= job.job_designation %>
+                      </h3>
+                      <p class="company-name-all">
+                        <%= job.company_name %>
+                      </p>
+                      <div class="job-location-all">
+                        <i class="bi bi-geo-alt"></i>
+                        <%= job.job_location %>
+                      </div>
+                      <div class="job-details">
+                        <div class="job-detail">
+                          <i class="fa-solid fa-briefcase"></i>
+                          <%= job.experience %>
+                        </div>
+                        <div class="job-detail salary">
+                          <i class="fa-solid fa-wallet"></i>
+                          <%= job.salary %>
+                        </div>
+                        <div class="job-detail">
+                          <i class="fa-solid fa-users"></i>
+                          <%= job.employees %>
+                        </div>
+                        <span class="easy-apply-badge">Easy Apply</span>
+                      </div>
+                      <div class="skills">
+                        <% job.skills_required.forEach(function(skill){ %>
+                          <span class="skill">
+                            <%= skill %>
+                          </span>
+                          <% }); %>
+                      </div>
+                      <div class="job-actions">
+                        <div class="job-posted">
+                          <%= job.job_posted %> · 127 applicants
+                        </div>
+                        <div class="action-btns">
+                          <button class="save-btn">
+                            <i class="bi bi-bookmark"></i> Save
+                          </button>
+                          <!-- Changed Apply button to redirect using an anchor tag -->
+                          <a href="/job/<%= job.id %>" class="apply-btn btn btn-primary">
+                            <i class="bi bi-send"></i> View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <% }); %>
+      </div>
+
+      <% const total=(pagination && pagination.total) || 0; const page=(pagination && pagination.page) || 1; const
+        limit=(pagination && pagination.limit) || 10; const totalPages=Math.max(1, Math.ceil(total/limit)); %>
+        <input type="hidden" name="page" id="pageInput" value="<%= page %>">
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item <%= page===1 ? 'disabled':'' %>">
+              <a class="page-link" href="#" data-page="<%= Math.max(1,page-1) %>" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <% for(let p=1;p<=totalPages;p++){ %>
+              <li class="page-item <%= p===page ? 'active':'' %>"><a class="page-link" href="#" data-page="<%= p %>">
+                  <%= p %>
+                </a></li>
+              <% } %>
+                <li class="page-item <%= page===totalPages ? 'disabled':'' %>">
+                  <a class="page-link" href="#" data-page="<%= Math.min(totalPages,page+1) %>" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+          </ul>
+        </nav>
+    </div>
+  </div>
+
+</form>
+
+<script>
+  (function () {
+    const form = document.getElementById('jobsFilterForm');
+    if (!form) return;
+    const submit = () => {
+      // reset to first page on filter changes
+      const pageEl = document.getElementById('pageInput');
+      if (pageEl) pageEl.value = 1;
+      form.submit();
+    };
+    // auto-submit on date, levels, types, sort changes
+    form.querySelectorAll('input[name="date"], input[name="levels"], input[name="types"], select[name="sort"]').forEach(el => {
+      el.addEventListener('change', submit);
+    });
+    // pagination links
+    document.querySelectorAll('.pagination a.page-link[data-page]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const p = a.getAttribute('data-page');
+        if (!p) return;
+        const pageEl = document.getElementById('pageInput');
+        if (pageEl) { pageEl.value = p; }
+        form.submit();
+      });
+    });
+  })();
+</script>

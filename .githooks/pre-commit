@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Prevent committing files larger than 50 MB
+MAX_SIZE=$((50 * 1024 * 1024))
+
+git diff --cached --name-only -z | while IFS= read -r -d '' file; do
+  if [ -f "$file" ]; then
+    size=$(wc -c <"$file")
+    if [ "$size" -gt "$MAX_SIZE" ]; then
+      echo "Error: $file is $(awk "BEGIN {printf \"%.2f\", $size/1024/1024}") MB, exceeds 50 MB limit."
+      echo "Tip: Add large files to .gitignore or store externally (S3/CDN) or use Git LFS."
+      exit 1
+    fi
+  fi
+done
+
+exit 0

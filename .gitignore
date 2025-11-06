@@ -1,0 +1,40 @@
+# Node
+node_modules/
+.npm/
+.pnpm-store/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Coverage/Build
+coverage/
+dist/
+build/
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Misc
+*.swp
+*.swo
+
+# Large media (prevent >100MB files)
+views/images/*.mp4
+*.mp4

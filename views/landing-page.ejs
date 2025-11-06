@@ -1,0 +1,863 @@
+<div class="container-lpage">
+  <div class="container-fluid main">
+    <div class="left p-2">
+      <h1 class="main-heading">Find your dream job now</h1>
+      <h2 class="ml12" style="color: rgb(30, 30, 30);">1 lakh+ jobs for you to explore</h2>
+      <br>
+      <div class="actions">
+        <a href="/jobs" class="btn btn-lg lbtn">Job Seeker</a>
+        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-lg lbtn mx-2">
+          Recruiter
+        </button>
+      </div>
+    </div>
+    <div class="right">
+      <img src="images/banner.png" alt="banner">
+      <!-- <img src="https://files.codingninjas.in/438375-17407.webp" alt="banner" /> -->
+    </div>
+  </div>
+</div>
+<!-- Modal for registration -->
+<!-- registration Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+
+      <!-- Header -->
+      <div class="modal-header"
+        style="background: linear-gradient(135deg, #007bff, #0056b3); color: white; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+        <h4 class="modal-title fw-bold" id="staticBackdropLabel">Create an Account</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body" style="padding: 20px;">
+        <form action="/register" method="post">
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Full Name</label>
+            <input required name="name" type="text" class="form-control" placeholder="Enter your name"
+              style="border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Email Address</label>
+            <input required name="email" type="email" class="form-control" placeholder="Enter your email"
+              style="border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-medium">Password</label>
+            <input required name="password" type="password" class="form-control" placeholder="Enter your password"
+              style="border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 fw-semibold"
+            style="border-radius: 8px; padding: 12px; background: #007bff; border: none; font-size: 16px;">
+            Register Now
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer"
+        style="justify-content: center; border-top: none; background: #f8f9fa; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+        <p class="small" style="margin: 0; font-size: 14px;">
+          Already have an account?
+          <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+            style="color: #007bff; font-weight: 600; text-decoration: none;">
+            Login
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+<!-- Top Companies Section -->
+<p style="text-align: center;font-size: 24px;font-weight: 900;"><b>Top companies hiring now</b></p>
+
+<div class="d-flex justify-content-center gap-4 py-4 mt-4">
+  <!-- MNC Card -->
+  <a href="/jobs?q=Google%20Microsoft%20Amazon%20IBM%20Oracle"
+    style="text-decoration:none;color:inherit;display:block;">
+    <div class="position-relative"
+      style="width: 220px; height: 130px; background: white;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); padding: 16px;border-radius: 8px;">
+
+      <div class="chip-heading-div">
+        <span class="industry-name" style="text-decoration: none;color: black;"><b>MNCs</b></span>
+        <img class="arrow-icon"
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/naukri-homepage-industry-wdgt/latest/resources/arrow-one-theme.2dc3b797.svg"
+          style="
+    margin-bottom: 2px;" alt="arrow-icon">
+      </div>
+      <span class="industry-company">1.27K are actively hiring</span>
+
+      <!-- <span class="position-absolute badge bg-primary" style="top: -10px; left: 16px; border-radius: 20px; padding: 5px 15px;">
+            MNC
+        </span> -->
+      <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center mt-2">
+        <div style="width: 40px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;
+    border: 1px solid #E7E7F1;"><img src="images/google.png" alt="Google"
+            style="width: 40px; height: 40px; object-fit: contain;"></div>
+        <div style="width: 40px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+    padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;"><img src="images/micro.png" alt="Microsoft"
+            style="width: 20px; height: 20px;object-fit: contain;"></div>
+        <div
+          style="width: 43px; height: 40px;box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;border: 1px solid #E7E7F1;">
+          <img src="images/amz.png" alt="Amazon" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Startups Card -->
+  <a href="/jobs?q=Stripe%20Uber%20Airbnb%20Flipkart" style="text-decoration:none;color:inherit;display:block;">
+    <div class="position-relative"
+      style="width: 220px; height: 130px; background: white; border-radius: 8px; background: white;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); padding: 16px;">
+      <div class="chip-heading-div">
+        <span class="industry-name" style="text-decoration: none;color: black;"><b>Startups</b></span>
+        <img class="arrow-icon"
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/naukri-homepage-industry-wdgt/latest/resources/arrow-one-theme.2dc3b797.svg"
+          style="
+    margin-bottom: 2px;" alt="arrow-icon">
+      </div>
+      <span class="industry-company">140 are actively hiring</span>
+      <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center mt-2">
+        <div
+          style="width: 42px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;padding: 5px;border-radius: 8px;border: 1px solid #E7E7F1;">
+          <img src="images/strp.png" alt="Stripe" style="width: 30px; height: 30px; object-fit: contain;">
+        </div>
+        <div style="width: 42px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;padding: 2px;border-radius: 8px;
+    border: 1px solid #E7E7F1;"><img src="images/uber.png" alt="Uber"
+            style="width: 36px; height: 36px; object-fit: contain;"></div>
+        <div style="width: 40px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;border-radius: 8px;
+    border: 1px solid #E7E7F1;"><img src="images/ab.png" alt="Airbnb"
+            style="width: 36px; height: 36px; object-fit: contain;"></div>
+      </div>
+    </div>
+  </a>
+
+  <!-- IT Services Card -->
+  <a href="/jobs?q=IBM%20Wipro%20TCS%20Infosys%20Accenture%20Cognizant"
+    style="text-decoration:none;color:inherit;display:block;">
+    <div class="position-relative"
+      style="width: 220px; height: 130px; background: white; border-radius: 8px; background: white;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); padding: 16px;">
+      <div class="chip-heading-div">
+        <span class="industry-name" style="text-decoration: none;color: black;"><b>IT Services</b></span>
+        <img class="arrow-icon"
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/naukri-homepage-industry-wdgt/latest/resources/arrow-one-theme.2dc3b797.svg"
+          style="
+      margin-bottom: 2px;" alt="arrow-icon">
+      </div>
+      <span class="industry-company">573 are actively hiring</span>
+      <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center mt-2">
+        <div
+          style="width: 40px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;">
+          <img src="images/adob.png" alt="TCS" style="width: 20px; height: 20px;">
+        </div>
+        <div style="width: 50px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+    padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;">
+          <img src="images/ibm.png" alt="Infosys" style="width: 40px; height: 40px; object-fit: contain;">
+        </div>
+        <div style="width: 50px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+    padding: 6px;border-radius: 8px;
+    border: 1px solid #E7E7F1;"><img src="https://www.wipro.com/content/dam/wipro/social-icons/wipro_new_logo.svg"
+            alt="Wipro" style="width: 40px; height: 40px; object-fit: contain;"></div>
+      </div>
+    </div>
+  </a>
+
+  <!-- Product Companies Card -->
+  <a href="/jobs?q=Salesforce%20Oracle%20Flipkart%20Adobe%20Google%20Microsoft"
+    style="text-decoration:none;color:inherit;display:block;">
+    <div class="position-relative"
+      style="width: 220px; height: 130px; background: white; border-radius: 8px; background: white;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1); padding: 16px;">
+      <div class="chip-heading-div">
+        <span class="industry-name" style="text-decoration: none;color: black;"><b>Product</b></span>
+        <img class="arrow-icon"
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/naukri-homepage-industry-wdgt/latest/resources/arrow-one-theme.2dc3b797.svg"
+          style="
+      margin-bottom: 2px;" alt="arrow-icon">
+      </div>
+      <span class="industry-company">2.1K+ are actively hiring</span>
+      <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center mt-2">
+        <div style="width: 50px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+          padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;"><img src="images/flip.png" alt="Adobe"
+            style="width: 30px; height: 30px; object-fit: contain;"></div>
+        <div style="width: 50px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+            padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;"><img src="images/sales.png" alt="Salesforce"
+            style="width: 30px; height: 30px; object-fit: contain;"></div>
+        <div style="width: 50px; height: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);text-align: center;
+            padding: 6px;border-radius: 8px;border: 1px solid #E7E7F1;"><img src="images/orc.png" alt="Oracle"
+            style="width: 40px; height: 40px; object-fit: contain;"></div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<section class="job-categories py-5">
+  <div class="container">
+    <p style="text-align: center;font-size: 24px;font-weight: 900;margin-bottom: 60px;"><b>Explore Job Categories</b>
+    </p>
+    <div class="row g-4">
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/remote-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;keyword=remote"
+            title="Remote">
+            <img class="ntc__chip-logo" src="https://static.naukimg.com/s/0/0/i/trending-naukri/remoteonetheme.svg"
+              alt="Remote-img">
+            <span title="Remote">Remote</span>
+            <img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/startup-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;qbusinessSize=62&amp;clusters=qbusinessSize"
+            title="Startup">
+            <img class="ntc__chip-logo" src="https://static.naukimg.com/s/0/0/i/trending-naukri/startuponetheme.svg"
+              alt="Startup-img" width="38" height="38">
+            <span class="ntc__chip-label" title="Startup">Startup</span>
+            <img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/fresher-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0"
+            title="Fresher"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/freshersonetheme.svg" alt="Fresher-img"><span
+              class="ntc__chip-label" title="Fresher">Fresher</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/internship-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;keyword=internship"
+            title="Internship"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/internshiponetheme.svg" alt="Internship-img"><span
+              class="ntc__chip-label" title="Internship">Internship</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/sales-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;functionAreaIdGid=14&amp;clusters=functionalAreaGid"
+            title="Sales"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/salesonetheme.svg" alt="Sales-img"><span
+              class="ntc__chip-label" title="Sales">Sales</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/engineering-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;functionAreaIdGid=11&amp;functionAreaIdGid=18&amp;clusters=functionalAreaGid"
+            title="Engineering"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/engineeringonetheme.svg"
+              alt="Engineering-img"><span class="ntc__chip-label" title="Engineering">Engineering</span><img
+              class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2 justify-content-center">
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/it-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;functionAreaIdGid=8&amp;functionAreaIdGid=4&amp;functionAreaIdGid=5&amp;clusters=functionalAreaGid"
+            title="Software &amp; IT"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/softwareonetheme.svg"
+              alt="Software &amp; IT-img"><span class="ntc__chip-label" title="Software &amp; IT">Software
+              IT</span>
+            <img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/mnc-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;qbusinessSize=213&amp;clusters=qbusinessSize"
+            title="MNC"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/mnconetheme.svg" alt="MNC-img"><span
+              class="ntc__chip-label" title="MNC">MNC</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/marketing-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;functionAreaIdGid=9&amp;clusters=functionalAreaGid"
+            title="Marketing"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/marketingonetheme.svg" alt="Marketing-img"><span
+              class="ntc__chip-label" title="Marketing">Marketing</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="cat-cards">
+          <a class="ntc__chip-wrapper"
+            href="https://www.naukri.com/analytics-jobs?src=discovery_trendingWdgt_personalized_homepage_srch&amp;experience=0&amp;roleTypeGid=158&amp;roleTypeGid=159&amp;roleTypeGid=161&amp;roleTypeGid=162&amp;roleTypeGid=163&amp;roleTypeGid=164&amp;roleTypeGid=165&amp;roleTypeGid=166"
+            title="Analytics"><img class="ntc__chip-logo"
+              src="https://static.naukimg.com/s/0/0/i/trending-naukri/analyticsonetheme.svg" alt="Analytics-img"><span
+              class="ntc__chip-label" title="Analytics">Analytics</span><img class="ntc__chip-arrow"
+              src="//static.naukimg.com/s/7/0/assets/images/src/widgets/trending-naukri-wdgt/latest/assets/arrow.2b55815e.svg"
+              alt="arrow-icon"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<p style="text-align: center;font-size: 24px;font-weight: 550;"><b>Jobs you may be interested in</b></p>
+
+
+<div class="d-flex justify-content-center gap-4 py-4 mt-4 mb-4">
+  <!-- MNC Card -->
+  <div class="position-relative"
+    style="width: 240px; height: 208px; border: 1px solid var(--N400, #E7E7F1); padding: 16px;border-radius: 8px;">
+
+    <div class="jobs-interested">
+      <div
+        style="width: 51px; height: 51px;box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;border: 1px solid #E7E7F1;">
+        <img src="https://img.naukri.com/logo_images/v3/91933.gif" alt="Amazon"
+          style="width: 51px; height: 51px; object-fit: contain;border: 1px solid var(--N400, #E7E7F1);">
+      </div>
+      <span class="created-date">1d ago</span>
+    </div>
+
+    <a class="iname" style="text-decoration: none;color: black;"><b>Fresher SQL Developer</b></a>
+    <div class="company-and-rating-container">
+      <span class="company-name-width">Shakti Infosolutions</span>
+      <span class="aggregate-rating"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/star-icon.9521485b.svg">4.2</span>
+    </div>
+
+    <div class="location-experience-container">
+      <span class="location limit-location-width">
+        <img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/location-icon.a2c8a533.svg">
+        <span>Chennai</span></span><span class="experience"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/experience-icon.54abebc9.svg">0-3
+        Yrs</span>
+    </div>
+
+  </div>
+
+  <div class="position-relative"
+    style="width: 240px; height: 208px; border: 1px solid var(--N400, #E7E7F1); padding: 16px;border-radius: 8px;">
+
+    <div class="jobs-interested">
+      <div
+        style="width: 51px; height: 51px;box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;border: 1px solid #E7E7F1;">
+        <img src="https://img.naukri.com/logo_images/v3/68320.gif" alt="Amazon"
+          style="width: 51px; height: 51px; object-fit: contain;border: 1px solid var(--N400, #E7E7F1);">
+      </div>
+      <span class="created-date">2d ago</span>
+    </div>
+
+    <a class="iname" style="text-decoration: none;color: black;"><b>Cloud Data Engineer</b></a>
+    <div class="company-and-rating-container">
+      <span class="company-name-width">ZS Associates</span>
+      <span class="aggregate-rating"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/star-icon.9521485b.svg">3.3</span>
+    </div>
+
+    <div class="location-experience-container">
+      <span class="location limit-location-width">
+        <img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/location-icon.a2c8a533.svg">
+        <span>Pune</span></span><span class="experience"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/experience-icon.54abebc9.svg">0-3
+        Yrs</span>
+    </div>
+
+  </div>
+
+  <div class="position-relative"
+    style="width: 240px; height: 208px; border: 1px solid var(--N400, #E7E7F1); padding: 16px;border-radius: 8px;">
+
+    <div class="jobs-interested">
+      <div
+        style="width: 51px; height: 51px;box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;border: 1px solid #E7E7F1;">
+        <img src="https://img.naukimg.com/logo_images/groups/v1/10476.gif" alt="Amazon"
+          style="width: 51px; height: 51px; object-fit: contain;border: 1px solid var(--N400, #E7E7F1);">
+      </div>
+      <span class="created-date">6d ago</span>
+    </div>
+
+    <a class="iname" style="text-decoration: none;color: black;"><b>Data Engineer</b></a>
+    <div class="company-and-rating-container">
+      <span class="company-name-width">Accenture</span>
+      <span class="aggregate-rating"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/star-icon.9521485b.svg">3.8</span>
+    </div>
+
+    <div class="location-experience-container">
+      <span class="location limit-location-width">
+        <img src="">
+        <span>Ahmedabad</span></span><span class="experience"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/experience-icon.54abebc9.svg">0-2
+        Yrs</span>
+    </div>
+
+  </div>
+
+  <div class="position-relative"
+    style="width: 240px; height: 208px; border: 1px solid var(--N400, #E7E7F1); padding: 16px;border-radius: 8px;">
+
+    <div class="jobs-interested">
+      <div
+        style="width: 51px; height: 51px;box-shadow: 0 2px 4px rgba(0,0,0,0.1);border-radius: 8px;border: 1px solid #E7E7F1;">
+        <img src="https://img.naukimg.com/logo_images/groups/v1/724728.gif" alt="Amazon"
+          style="width: 51px; height: 51px; object-fit: contain;border: 1px solid var(--N400, #E7E7F1);">
+      </div>
+      <span class="created-date">5d ago</span>
+    </div>
+
+    <a class="iname" style="text-decoration: none;color: black;"><b>SQL Developer</b></a>
+    <div class="company-and-rating-container">
+      <span class="company-name-width">Revalsys Technologies</span>
+      <span class="aggregate-rating"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/star-icon.9521485b.svg">3.7</span>
+    </div>
+
+    <div class="location-experience-container">
+      <span class="location limit-location-width">
+        <img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/location-icon.a2c8a533.svg">
+        <span>Hyderabad</span></span><span class="experience"><img
+          src="//static.naukimg.com/s/7/0/assets/images/src/widgets/popular-jobs-wdgt/latest/resources/experience-icon.54abebc9.svg">0-1
+        Yrs</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- How It Works Section -->
+<section class="how-it-works pt-5 ">
+  <div class="container">
+    <div class="text-center mb-2">
+      <p style="text-align: center;font-size: 24px;font-weight: 900;">How Easily Works</p>
+      <p style="text-align: center;font-size: 20px;margin-bottom: 0px;color:#211B29BF">Your journey to the perfect job
+        in three simple steps</p>
+    </div>
+    <div class="col">
+      <div class="row-md-4">
+        <div class="work-step text-center mb-2">
+          <div>
+            <div class="step-icon mb-3">
+              <span class="badge rounded-circle bg-primary p-3 fs-4">1</span>
+            </div>
+            <h4 class="mb-3 fw-bold">Create Profile</h4>
+            <p class="text-muted">Build a professional profile that stands out to employers.</p>
+          </div>
+          <div class="step-divider">
+            <img
+              src="https://img.freepik.com/free-vector/illustrated-woman-being-intern-company_23-2148726151.jpg?t=st=1742380445~exp=1742384045~hmac=67ca7bbbbe1da4a0846715456a80b6e1be1696af8e058efae4c344bad35d350e&w=900"
+              alt="" width="300px" height="300px">
+          </div>
+        </div>
+      </div>
+
+      <div class="row-md-4">
+        <div class="work-step text-center mb-2">
+          <div class="step-divider">
+            <img
+              src="https://img.freepik.com/free-vector/job-vacancy-background-with-chair-flat-style_23-2147875408.jpg?t=st=1742382467~exp=1742386067~hmac=146baed416cb50de5fa4779d1b4e233bd62ff36d1754da443d5c44f8f46a4b02&w=900"
+              alt="" width="300px" height="300px">
+          </div>
+          <div>
+            <div class="step-icon mb-3">
+              <span class="badge rounded-circle bg-success p-3 fs-4">2</span>
+            </div>
+            <h4 class="mb-3 fw-bold">Find Jobs</h4>
+            <p class="text-muted">Browse thousands of job opportunities tailored to your skills.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="row-md-4">
+        <div class="work-step text-center mb-2">
+          <div>
+            <div class="step-icon mb-3">
+              <span class="badge rounded-circle bg-warning p-3 fs-4">3</span>
+            </div>
+            <h4 class="mb-3 fw-bold">Apply & Grow</h4>
+            <p class="text-muted">Apply with confidence and advance your career.</p>
+          </div>
+          <div class="step-divider">
+            <img
+              src="https://img.freepik.com/free-vector/job-offers-concept-illustration_114360-4369.jpg?t=st=1742382258~exp=1742385858~hmac=18af84cf838f0ee42b8d52e405e94e30db78997e658009ccaf2c4f21a803bb6e&w=900"
+              alt="" width="300px" height="300px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section style="padding-top: 2rem !important; padding-bottom: 3rem !important;border: 0.5px grey solid;background: radial-gradient(circle at 30% 30%, 
+rgba(255, 240, 245, 0.7) 10%,  /* Soft pink */
+rgba(255, 230, 210, 0.5) 30%,  /* Warm peach */
+rgba(240, 240, 255, 0.5) 50%,  /* Soft lavender */
+rgba(220, 240, 250, 0.5) 70%,  /* Light blue */
+rgba(255, 250, 248, 0.9) 100%  /* Creamy white */
+), 
+linear-gradient(120deg, 
+rgba(255, 210, 220, 0.4) 10%,  /* Light pink */
+rgba(250, 220, 180, 0.3) 30%,  /* Soft peach */
+rgba(200, 230, 255, 0.3) 60%,  /* Pastel blue */
+rgba(255, 250, 248, 0.8) 100%  /* Cream */
+);
+background-blend-mode: overlay, soft-light;
+border: 0.5px #f2e6e6 solid;
+    border-radius: 30px;">
+  <div class="container">
+    <div class="text-center mb-4">
+      <p style="text-align: center;font-size: 38px;font-weight: 900;"><b>Success Stories</b></p>
+      <p class="lead text-muted">Real people, real careers, real success</p>
+    </div>
+    <div class="row g-4">
+      <div class="scroll-container">
+        <div class="scroll-content">
+          <div class="col-md-4">
+            <div class="card-container">
+              <div class="header-container">
+                <div class="user-info">
+                  <img src="https://avatar.iran.liara.run/public" class="rounded-circle me-3" width="48" height="48"
+                    alt="User">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Sarah Johnson</h6>
+                    <small class="text-muted">@Google</small>
+                  </div>
+                </div>
+                <div>
+                  <svg viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <path
+                      d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
+                      fill="#4285f4" />
+                    <path
+                      d="M272.1 544.3c73.4 0 135.3-24.1 180.4-65.7l-87.7-68c-24.4 16.6-55.9 26-92.6 26-71 0-131.2-47.9-152.8-112.3H28.9v70.1c46.2 91.9 140.3 149.9 243.2 149.9z"
+                      fill="#34a853" />
+                    <path
+                      d="M119.3 324.3c-11.4-33.8-11.4-70.4 0-104.2V150H28.9c-38.6 76.9-38.6 167.5 0 244.4l90.4-70.1z"
+                      fill="#fbbc04" />
+                    <path
+                      d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
+                      fill="#ea4335" />
+                  </svg>
+                </div>
+              </div>
+              <p class="tweet-text">Easily helped me land my dream job in tech. The platform is intuitive and full of
+                opportunities!</p>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="card-container">
+              <div class="header-container">
+                <div class="user-info">
+                  <img src="https://avatar.iran.liara.run/public/boy" class="rounded-circle me-3" width="48" height="48"
+                    alt="User">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Michael Chen</h6>
+                    <small class="text-muted">@stripe</small>
+                  </div>
+                </div>
+                <div>
+                  <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                    <path
+                      d="M165 144.7l-43.3 9.2-.2 142.4c0 26.3 19.8 43.3 46.1 43.3 14.6 0 25.3-2.7 31.2-5.9v-33.8c-5.7 2.3-33.7 10.5-33.7-15.7V221h33.7v-37.8h-33.7zm89.1 51.6l-2.7-13.1H213v153.2h44.3V233.3c10.5-13.8 28.2-11.1 33.9-9.3v-40.8c-6-2.1-26.7-6-37.1 13.1zm92.3-72.3l-44.6 9.5v36.2l44.6-9.5zM44.9 228.3c0-6.9 5.8-9.6 15.1-9.7 13.5 0 30.7 4.1 44.2 11.4v-41.8c-14.7-5.8-29.4-8.1-44.1-8.1-36 0-60 18.8-60 50.2 0 49.2 67.5 41.2 67.5 62.4 0 8.2-7.1 10.9-17 10.9-14.7 0-33.7-6.1-48.6-14.2v40c16.5 7.1 33.2 10.1 48.5 10.1 36.9 0 62.3-15.8 62.3-47.8 0-52.9-67.9-43.4-67.9-63.4zM640 261.6c0-45.5-22-81.4-64.2-81.4s-67.9 35.9-67.9 81.1c0 53.5 30.3 78.2 73.5 78.2 21.2 0 37.1-4.8 49.2-11.5v-33.4c-12.1 6.1-26 9.8-43.6 9.8-17.3 0-32.5-6.1-34.5-26.9h86.9c.2-2.3.6-11.6.6-15.9zm-87.9-16.8c0-20 12.3-28.4 23.4-28.4 10.9 0 22.5 8.4 22.5 28.4zm-112.9-64.6c-17.4 0-28.6 8.2-34.8 13.9l-2.3-11H363v204.8l44.4-9.4.1-50.2c6.4 4.7 15.9 11.2 31.4 11.2 31.8 0 60.8-23.2 60.8-79.6.1-51.6-29.3-79.7-60.5-79.7zm-10.6 122.5c-10.4 0-16.6-3.8-20.9-8.4l-.3-66c4.6-5.1 11-8.8 21.2-8.8 16.2 0 27.4 18.2 27.4 41.4.1 23.9-10.9 41.8-27.4 41.8zm-126.7 33.7h44.6V183.2h-44.6z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="tweet-text">As a recruiter, Easily has been my go-to platform for finding top talent quickly and
+                efficiently.</p>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="card-container">
+              <div class="header-container">
+                <div class="user-info">
+                  <img src="https://avatar.iran.liara.run/public/girl" class="rounded-circle me-3" width="48"
+                    height="48" alt="User">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Hikmet Atçeken</h6>
+                    <small class="text-muted">@Uber</small>
+                  </div>
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512">
+                    <g>
+                      <g id="XMLID_1_">
+                        <path
+                          d="M511.74,305.79c0.43,0.64,0.43,1.84-1,1.86h-19.99c-1.62,0-2.26-0.66-2.9-1.73l-21.29-38.27h-19.35    c-9.58,0-13.12,2.92-13.12,9.36v30.64h-19.24c-1.73,0-2.58-0.86-2.58-2.58V209.9c0-5.06,2.79-7.32,10.22-7.32h44.94    c26.14,0,41.95,6.89,41.95,32.36c0,19.67-9.48,27.42-21.19,30.43L511.74,305.79z M487.34,235.35c0-10.65-3.01-15.92-16.66-15.92    h-36.57v31.83h36.57C484.33,251.26,487.34,246.12,487.34,235.35z" />
+                        <path
+                          d="M373.5,202.54c0.88,0,1.2,0.45,0.88,1.3l-5.7,14.08c-0.53,1.19-1.28,1.73-2.9,1.73h-59.92v26.34h50    c0.85,0,1.17,0.43,0.85,1.28l-5.48,13.55c-0.53,1.2-1.28,1.73-2.9,1.73h-29.35c-9.58,0-13.12,2.92-13.12,9.36v18.61h67.62    c0.88,0,1.2,0.42,0.88,1.28l-5.7,14.08c-0.53,1.19-1.28,1.73-2.9,1.73h-73.88c-5.69,0-7.85-1.95-7.85-6.26v-91.49    c0-5.06,2.8-7.32,10.22-7.32H373.5z" />
+                        <path
+                          d="M226.28,252.25c11.82,3.11,17.2,13.76,17.2,26.32c0,20.97-14.83,29.04-35.59,29.04h-55.06c-5.69,0-7.85-1.92-7.85-6.23    v-91.5c0-5.06,2.8-7.32,10.22-7.32h44.76c19.56,0,38.48,3.43,38.48,26.67C238.44,239.23,234.88,247.72,226.28,252.25z     M221.44,276.54c0-9.66-3.43-14.4-15.81-14.4h-25.7c-9.56,0-13.12,2.91-13.12,9.35v19.24h38.82    C218.01,290.73,221.44,286.21,221.44,276.54z M216.41,232.87c0-9.06-3.25-13.44-14.85-13.44h-34.75v26.88h34.75    C213.18,246.31,216.41,241.94,216.41,232.87z" />
+                        <path
+                          d="M102.78,202.56v62.46c0,32.92-20.97,44.42-51.39,44.42S0,297.92,0,265.02v-59.88c0-1.71,0.85-2.58,2.58-2.58h19.67v61.5    c0,19.67,8.7,27.84,29.14,27.84s29.14-8.17,29.14-27.84v-58.92c0-1.71,0.86-2.58,2.58-2.58H102.78z" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p class="tweet-text">Pulsefy's our daily tool to bypass averages and reveal true insights, for the whole
+                team!</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-container">
+              <div class="header-container">
+                <div class="user-info">
+                  <img src="https://avatar.iran.liara.run/public" class="rounded-circle me-3" width="48" height="48"
+                    alt="User">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Kalsen Awar</h6>
+                    <small class="text-muted">@Microsoft</small>
+                  </div>
+                </div>
+                <div>
+                  <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="48"
+                    height="48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="形状_1_9_" style="enable-background:new    ;">
+                      <g id="形状_1">
+                        <g>
+                          <path
+                            d="M265.154,250.565c4.144-0.521,8.277,1.053,11.536,3.536     c0.03-3.214-0.025-6.429,0.03-9.64c-0.904-0.529-1.877-0.918-2.882-1.198c-4.875-1.375-10.136-1.431-15.013-0.045     c-4.477,1.288-8.585,4.029-11.212,7.901c-3.135,4.538-4.243,10.207-3.997,15.642c0.244,5.229,2.31,10.446,6.116,14.106     c3.502,3.394,8.328,5.222,13.166,5.477c4.729,0.232,9.682-0.4,13.814-2.854c-0.037-3.043,0.006-6.087-0.022-9.13     c-2.663,1.942-5.773,3.334-9.068,3.713c-3.335,0.251-6.907-0.549-9.455-2.809c-2.453-2.086-3.758-5.229-4.084-8.377     c-0.435-4.021,0.149-8.386,2.678-11.673C258.729,252.564,261.865,250.862,265.154,250.565z M231.013,225.354     c-2.807,0.319-5.201,2.864-5.125,5.72c-0.118,2.713,2.069,5.146,4.693,5.617c2.529,0.551,5.43-0.516,6.727-2.812     c1.173-2.035,0.882-4.808-0.702-6.549C235.256,225.74,233.05,225.046,231.013,225.354z M203.208,226.636     c-5.84,14.501-11.81,28.944-17.695,43.425c-1.227-2.876-2.321-5.807-3.491-8.704c-4.58-11.589-9.189-23.166-13.763-34.754     h-14.698c-0.006,19.598-0.003,39.197,0,58.796c3.205-0.003,6.413,0.005,9.621-0.003c-0.008-8.774,0-17.549-0.002-26.324     c0.034-6.336-0.07-12.678,0.053-19.013c0.182,0.287,0.351,0.587,0.508,0.896c5.995,14.813,11.945,29.649,17.97,44.452     c2.422-0.039,4.844,0.042,7.264-0.045c5.807-14.816,11.759-29.577,17.6-44.38c0.155-0.324,0.332-0.638,0.531-0.94     c0.045,0.649,0.067,1.299,0.062,1.949c-0.019,14.464,0.02,28.925-0.016,43.386c3.398,0.048,6.797,0.011,10.199,0.02     c-0.003-19.596-0.008-39.192,0.003-58.788C212.636,226.618,207.92,226.561,203.208,226.636z M299.319,243.904     c-2.534,1.432-4.143,3.979-5.223,6.603c0.009-2.414-0.006-4.824,0.009-7.235c-3.326-0.016-6.652-0.033-9.979,0.009     c0.02,14.039,0,28.08,0.009,42.118h9.964c0.002-6.717,0-13.434,0-20.151c-0.082-2.917,0.159-5.935,1.439-8.603     c1.178-2.521,3.451-4.718,6.32-5.043c2.352-0.238,4.838,0.313,6.831,1.602c0.008-3.363-0.006-6.725,0.008-10.088     C305.653,242.094,302.108,242.233,299.319,243.904z M226.806,243.271c0.009,14.044-0.002,28.086,0.006,42.127h10.033     c0.014-14.036-0.022-28.073,0.017-42.109C233.511,243.225,230.157,243.258,226.806,243.271z M378.489,262.429     c-2.97-1.714-6.388-2.525-9.253-4.438c-1.676-1.062-2.149-3.386-1.465-5.158c0.861-1.791,2.938-2.59,4.827-2.662     c3.75-0.132,7.524,1.008,10.614,3.128c-0.003-3.089,0.003-6.177-0.003-9.268c-4.423-1.672-9.314-2.273-13.988-1.453     c-3.948,0.702-7.824,2.749-10.056,6.162c-1.953,2.929-2.205,6.705-1.397,10.057c0.545,2.273,1.937,4.289,3.775,5.72     c2.615,2.002,5.745,3.119,8.723,4.455c1.586,0.745,3.267,1.504,4.412,2.88c1.224,1.788,0.853,4.708-1.208,5.729     c-2.151,1.03-4.664,1.013-6.974,0.639c-3.317-0.571-6.452-1.98-9.17-3.948c-0.036,3.248-0.002,6.496-0.016,9.746     c3.229,1.434,6.761,2.125,10.274,2.353c4.948,0.185,10.328-0.779,14.063-4.262c3.913-3.449,4.855-9.562,2.63-14.187     C383.095,265.452,380.827,263.738,378.489,262.429z M422.85,244.513c-4.603-2.319-9.957-2.657-15-2.033     c-4.067,0.521-8.063,2.061-11.168,4.779c-3.789,3.257-6.012,8.044-6.666,12.941c-0.623,4.896-0.412,10.054,1.589,14.637     c1.92,4.497,5.708,8.148,10.267,9.937c4.498,1.768,9.5,1.965,14.234,1.201c4.842-0.797,9.428-3.337,12.425-7.246     c3.203-4.037,4.58-9.262,4.571-14.352c0.07-3.407-0.355-6.862-1.571-10.063C429.976,250.132,426.864,246.515,422.85,244.513z      M422.415,268.6c-0.388,2.218-1.156,4.429-2.612,6.185c-1.469,1.764-3.652,2.839-5.906,3.169     c-2.419,0.361-4.967,0.188-7.229-0.784c-2.441-1.03-4.333-3.138-5.329-5.563c-1.199-2.889-1.438-6.09-1.199-9.18     c0.23-2.994,1.081-6.065,3.063-8.392c1.808-2.172,4.58-3.373,7.376-3.53c2.854-0.198,5.902,0.46,8.097,2.383     c2.023,1.675,3.144,4.183,3.657,6.708C422.909,262.557,422.903,265.622,422.415,268.6z M341.766,244.196     c-4.501-2.044-9.618-2.318-14.468-1.703c-5.094,0.642-10.053,3.032-13.286,7.084c-2.953,3.617-4.39,8.265-4.664,12.876     c-0.408,5.436,0.502,11.202,3.701,15.738c2.726,3.914,7.027,6.604,11.676,7.596c3.884,0.814,7.947,0.817,11.832,0.011     c4.544-0.932,8.787-3.44,11.603-7.142c2.75-3.485,4.131-7.882,4.442-12.269c0.317-4.494-0.138-9.148-2.01-13.291     C348.838,249.204,345.673,245.954,341.766,244.196z M340.831,272.438c-0.966,2.167-2.733,3.998-4.965,4.866     c-2.61,1-5.543,1.059-8.237,0.361c-2.742-0.719-5.068-2.696-6.334-5.214c-1.629-3.241-1.872-6.99-1.536-10.546     c0.307-3.234,1.435-6.56,3.904-8.792c1.792-1.668,4.233-2.483,6.649-2.618c3.036-0.198,6.27,0.658,8.452,2.861     c2.336,2.291,3.239,5.613,3.489,8.783C342.434,265.609,342.29,269.224,340.831,272.438z M485.998,251.445v-8.188     c-3.334,0.012-6.669-0.025-10,0.022c-0.076-4.208-0.009-8.416-0.037-12.621c-3.334,1.002-6.648,2.069-10,3.021     c-0.08,3.192-0.005,6.387-0.042,9.578c-4.928-0.002-9.856,0.006-14.785-0.005c0.063-2.515-0.173-5.048,0.188-7.549     c0.3-1.971,1.445-3.941,3.371-4.704c2.428-0.993,5.142-0.333,7.448,0.681c-0.014-2.881,0.022-5.762-0.02-8.64     c-4.854-1.333-10.421-1.072-14.729,1.725c-2.778,1.774-4.794,4.614-5.7,7.761c-1.071,3.486-0.525,7.168-0.696,10.745     c-2.338-0.016-4.673-0.039-7.005,0.015c0.024,2.693,0.015,5.387,0.006,8.077c2.343,0.048,4.688-0.009,7.032,0.037     c-0.02,11.333-0.005,22.664-0.005,33.998h10.106c0-11.337-0.003-22.674,0.002-34.01c4.929-0.008,9.86-0.006,14.792-0.003     c0.014,7.227-0.015,14.45,0.011,21.674c0.045,3.364,0.62,6.963,2.854,9.619c1.935,2.353,5.004,3.428,7.968,3.646     c3.124,0.221,6.352-0.16,9.24-1.411v-8.269c-2.215,1.479-5.273,2.066-7.686,0.72c-1.438-0.792-1.998-2.489-2.183-4.021     c-0.306-2.599-0.112-5.219-0.166-7.826c-0.003-4.708,0.009-9.415-0.005-14.122C479.304,251.408,482.652,251.308,485.998,251.445z     "
+                            style="fill-rule:evenodd;clip-rule:evenodd;fill:#434343;" />
+                        </g>
+                      </g>
+                    </g>
+                    <g id="形状_1_8_" style="enable-background:new    ;">
+                      <g id="形状_1_1_">
+                        <g>
+                          <path d="M26.002,207.003v46.617h46.726     c0.003-15.539,0-31.078,0.003-46.617H26.002z"
+                            style="fill-rule:evenodd;clip-rule:evenodd;fill:#F25022;" />
+                        </g>
+                      </g>
+                    </g>
+                    <g id="形状_1_7_" style="enable-background:new    ;">
+                      <g id="形状_1_2_">
+                        <g>
+                          <path
+                            d="M26.002,258.377v46.62h46.729     c0-15.539,0.003-31.075,0-46.614C57.155,258.375,41.579,258.383,26.002,258.377z"
+                            style="fill-rule:evenodd;clip-rule:evenodd;fill:#02A4EF;" />
+                        </g>
+                      </g>
+                    </g>
+                    <g id="形状_1_6_" style="enable-background:new    ;">
+                      <g id="形状_1_3_">
+                        <g>
+                          <path
+                            d="M77.506,258.383c-0.006,15.536,0,31.075-0.003,46.614h46.729     V258.38C108.655,258.38,93.079,258.377,77.506,258.383z"
+                            style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFB902;" />
+                        </g>
+                      </g>
+                    </g>
+                    <g id="形状_1_5_" style="enable-background:new    ;">
+                      <g id="形状_1_4_">
+                        <g>
+                          <path
+                            d="M77.503,207.003c0,15.539-0.003,31.078,0.003,46.617     c15.573,0,31.149-0.003,46.723,0c0.006-15.539,0.003-31.078,0.003-46.617H77.503z"
+                            style="fill-rule:evenodd;clip-rule:evenodd;fill:#80BA01;" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p class="tweet-text">Pulsefy's our daily tool to bypass averages and reveal true insights, for the whole
+                team!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Newsletter Signup -->
+<!-- <section class="newsletter py-5 mt-4" style="background-color:#F4F9FF">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="display-6 fw-bold mb-3">Stay Updated</h2>
+        <p class="lead">Subscribe to our newsletter and never miss a job opportunity!</p>
+      </div>
+      <div class="col-md-6">
+        <form class="newsletter-form">
+          <div class="input-group">
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- You can add hover effects with CSS -->
+<style>
+  .company-card {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .company-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .company-card img {
+    transition: transform 0.3s ease;
+  }
+
+  .company-card img:hover {
+    transform: scale(1.1);
+  }
+
+  .category-card,
+  .testimonials .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .category-card:hover,
+  .testimonials .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+</style>
+
+
+<!-- Modal for registration -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 12px;">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4 fw-bold" id="loginModalLabel">
+          Welcome Back!
+        </h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/login" method="post">
+          <div class="mb-4">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input id="loginEmail" required name="email" type="email" class="form-control"
+                placeholder="Enter your email" />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="loginPassword" class="form-label">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input id="loginPassword" required name="password" type="password" class="form-control"
+                placeholder="Enter your password" />
+              <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <a href="#" class="text-primary text-decoration-none small">Forgot Password?</a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <p class="small">Don't have an account?
+          <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-primary"
+            style="color: #007bff; font-weight: 600; text-decoration: none;">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Password Toggle Visibility
+  document.getElementById('togglePassword').addEventListener('click', function () {
+    const passwordInput = document.getElementById('loginPassword');
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    this.querySelector('i').classList.toggle('fa-eye');
+    this.querySelector('i').classList.toggle('fa-eye-slash');
+  });
+
+  var textWrapper = document.querySelector(".ml12");
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
+
+  anime
+    .timeline({ loop: true })
+    .add({
+      targets: ".ml12 .letter",
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i,
+    })
+    .add({
+      targets: ".ml12 .letter",
+      translateX: [0, -30],
+      opacity: [1, 0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i,
+    });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollContent = document.querySelector('.scroll-content');
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    // Clone testimonials for infinite effect
+    testimonials.forEach(testimonial => {
+      let clone = testimonial.cloneNode(true);
+      clone.classList.add('duplicate');
+      scrollContent.appendChild(clone);
+    });
+  });
+</script>

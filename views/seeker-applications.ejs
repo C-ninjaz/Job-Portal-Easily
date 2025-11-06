@@ -1,0 +1,92 @@
+<div class="container" style="max-width: 980px;">
+    <div class="card shadow-sm rounded-4 border-0 mt-4">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+            <div>
+                <h4 class="fw-bold mb-1">My Applications</h4>
+                <p class="text-muted small mb-0">Track your job applications and statuses</p>
+            </div>
+            <form class="d-flex" method="get" action="/seeker/applications">
+                <input class="form-control me-2" type="text" placeholder="Search company or role" name="q"
+                    value="<%= q || '' %>" />
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Role</th>
+                        <th>Location</th>
+                        <th>Applied</th>
+                        <th>Status</th>
+                        <th>Resume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if ((applications || []).length===0) { %>
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">No applications yet.</td>
+                        </tr>
+                        <% } %>
+                            <% (applications || []).forEach(a=> { %>
+                                <tr>
+                                    <td class="d-flex align-items-center gap-2">
+                                        <img src="<%= a.logo %>" alt="logo"
+                                            style="width:32px;height:32px;border-radius:6px;object-fit:cover;">
+                                        <div class="fw-semibold">
+                                            <%= a.company_name %>
+                                        </div>
+                                    </td>
+                                    <td><a href="/job/<%= a.jobId %>" class="text-decoration-none">
+                                            <%= a.job_designation %>
+                                        </a></td>
+                                    <td>
+                                        <%= a.job_location || '-' %>
+                                    </td>
+                                    <td>
+                                        <%= a.applied_at %>
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="badge <%= a.status === 'Submitted' ? 'bg-secondary' : 'bg-success' %>">
+                                            <%= a.status %>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <% if (a.resumePath) { %>
+                                            <a class="badge bg-primary text-decoration-none" href="<%= a.resumePath %>"
+                                                target="_blank">View</a>
+                                            <% } else { %>
+                                                <span class="text-muted small">—</span>
+                                                <% } %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+        <% const total=(pagination && pagination.total) || 0; const page=(pagination && pagination.page) || 1; const
+            limit=(pagination && pagination.limit) || 10; const totalPages=Math.max(1, Math.ceil(total/limit)); %>
+            <nav aria-label="Page navigation" class="px-3 pb-3">
+                <ul class="pagination mb-0">
+                    <li class="page-item <%= page<=1 ? 'disabled' : '' %>">
+                        <a class="page-link"
+                            href="?q=<%= encodeURIComponent(q||'') %>&page=<%= Math.max(1, page-1) %>&limit=<%= limit %>">Prev</a>
+                    </li>
+                    <% for (let p=1; p<=totalPages; p++) { %>
+                        <li class="page-item <%= p===page ? 'active' : '' %>"><a class="page-link"
+                                href="?q=<%= encodeURIComponent(q||'') %>&page=<%= p %>&limit=<%= limit %>">
+                                <%= p %>
+                            </a></li>
+                        <% } %>
+                            <li class="page-item <%= page>=totalPages ? 'disabled' : '' %>">
+                                <a class="page-link"
+                                    href="?q=<%= encodeURIComponent(q||'') %>&page=<%= Math.min(totalPages, page+1) %>&limit=<%= limit %>">Next</a>
+                            </li>
+                </ul>
+            </nav>
+    </div>
+</div>

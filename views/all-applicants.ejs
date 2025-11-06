@@ -1,0 +1,140 @@
+<div class="container" style="max-width: 900px;">
+  <div class="card shadow-sm rounded-4 border-0">
+    <!-- Enhanced Header -->
+    <div class="card-header bg-white text-dark d-flex justify-content-between align-items-center py-3">
+      <div>
+        <h4 class="fw-bold mb-1">Applicants</h4>
+        <p class="text-muted small mb-0">List of all job applicants with their details</p>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-responsive">
+      <table class="table modern-table align-middle">
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" class="form-check-input" />
+            </th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Resume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%allApplicants.forEach((applicant)=> {%>
+            <tr>
+              <td>
+                <input type="checkbox" class="form-check-input" />
+              </td>
+              <td class="d-flex align-items-center">
+                <img src="https://ui-avatars.com/api/?name=<%=applicant.name%>&background=random"
+                  class="avatar-img me-2" />
+                <span>
+                  <%=applicant.name%>
+                </span>
+              </td>
+              <td>
+                <%=applicant.email%>
+              </td>
+              <td>
+                <a class="badge badge-primary" href="/<%=applicant.resumePath%>" target="_blank">
+                  View Resume
+                </a>
+              </td>
+            </tr>
+            <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Card Styling */
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Improved Header */
+  .card-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .card-header h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card-header p {
+    font-size: 14px;
+  }
+
+  /* Button Styling */
+  .btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+
+  /* Table Styling */
+  .modern-table {
+    margin-bottom: 34px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .modern-table th {
+    background: #f8f9fa;
+    color: #333;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .modern-table td {
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Avatar Styling */
+  .avatar-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* Checkbox Styling */
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  /* Badge Button */
+  .badge-primary {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .badge-primary:hover {
+    background: #0056b3;
+  }
+</style>

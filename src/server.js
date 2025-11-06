@@ -6,12 +6,14 @@ import { seedJobsIfEmpty } from "./utils/seed.js";
 
 dotenv.config();
 
-// Connect to MongoDB (optional in dev). If connection fails, app will still run with in-memory data.
+// Connect to MongoDB (optional). Regardless of DB status, ensure demo data is seeded.
 try {
   await connectToDb();
-  await seedJobsIfEmpty();
 } catch (e) {
   console.warn("Starting without MongoDB; using in-memory store only.");
+} finally {
+  // Always seed in-memory demo data so /jobs isn't empty on cold starts
+  await seedJobsIfEmpty();
 }
 
 const app = createApp();
